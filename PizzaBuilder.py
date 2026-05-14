@@ -6,22 +6,17 @@ def main(page: ft.Page):
     olives = ft.Image(src="olive.gif", width=300, height=300, visible=False)
     margarita = ft.Image(src="margarita.gif", width=300, height=300, visible=False)
 
-
     #Functions
     def toggle_olives(e):
         olives.visible = e.control.value
-        page.update()
 
     def toggle_pepperoni(e):
         margarita.visible = e.control.value
-        page.update()
-
 
     #Page Setup
     page.title = "Pizza Builder"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-
 
     #Controls
     olive_switch = ft.Switch(label="Olives Pizza", on_change=toggle_olives)
